@@ -1,0 +1,60 @@
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Bars3Icon, XMarkIcon, UserIcon } from "@heroicons/react/24/solid";
+
+const Navigation = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+
+  return (
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-gradient-to-b from-lime-950/40 to-black/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="flex items-center"
+          >
+            <img src="/icons/logo.svg" className="w-14 h-14" />
+          </motion.div>
+          
+          <div className="hidden md:flex space-x-8 items-center">
+            <a href="#home" className="text-lime-300 hover:text-white transition-colors">HOME</a>
+            <a href="#testimonials" className="text-lime-300 hover:text-white transition-colors">TESTIMONIALS</a>
+            <a href="#support" className="text-lime-300 hover:text-white transition-colors">BROKER SUPPORT</a>
+            <button className="relative overflow-hidden text-lime-300 px-4 py-2 rounded-lg border-1 hover:text-white transition-colors">
+              LOGIN
+              <UserIcon className="absolute top-1 right-0 h-12 w-12 text-lime-400/40" />
+            </button>
+          </div>
+
+          <div className="md:hidden grid place-items-center">
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-lime-300"
+            >
+              {mobileMenuOpen ? <XMarkIcon className='w-8 h-8' /> : <Bars3Icon className='w-8 h-8' />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <motion.div 
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          className="md:hidden bg-black border-t border-lime-500/20"
+        >
+          <div className="px-4 py-4 space-y-4">
+            <a href="#home" className="block text-lime-300">HOME</a>
+            <a href="#testimonials" className="block text-white">TESTIMONIALS</a>
+            <a href="#support" className="block text-white">BROKER SUPPORT</a>
+            <button className="w-full text-lime-300 py-2">LOGIN</button>
+          </div>
+        </motion.div>
+      )}
+    </nav>
+  );
+};
+
+export default Navigation;
