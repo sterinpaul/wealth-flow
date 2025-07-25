@@ -4,3 +4,4 @@ export { default as ValueEcosystem } from './ValueEcosystem';
 export { default as WhyWealthFlow } from './WhyWealthFlow';
 export { default as Testimonials } from './Testimonials';
 export { default as FAQ } from './FAQ';
+export { default as Loader } from './Loader';

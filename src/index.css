@@ -32,3 +32,15 @@
 .custom-box-shadow{
   box-shadow: 0 0 20px 1px rgb(61, 89, 0);
 }
+
+/* For all elements */
+.hide-scrollbar {
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE and Edge */
+  overflow: auto;              /* Still allow scrolling */
+}
+
+/* For WebKit-based browsers (Chrome, Safari) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

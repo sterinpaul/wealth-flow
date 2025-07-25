@@ -1,23 +1,20 @@
-import { 
-  Navigation,
-  Hero,
-  ValueEcosystem,
-  WhyWealthFlow,
-  FAQ,
-} from './components';
-import Testimonials from './components/Testimonials';
+import { lazy, Suspense } from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Loader from "./components/Loader.tsx";
 
-const App = () => {
-  return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      <Navigation />
-      <Hero />
-      <ValueEcosystem />
-      <WhyWealthFlow />
-      <Testimonials />
-      <FAQ />
-    </div>
-  );
-};
+const Home = lazy(() => import("./pages/Home.tsx"));
 
-export default App;
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <Suspense fallback={<Loader/>}>
+        <Home />
+      </Suspense>
+    ),
+  },
+]);
+
+export default function App() {
+  return <RouterProvider router={router} />;
+}

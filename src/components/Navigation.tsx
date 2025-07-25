@@ -14,16 +14,16 @@ const Navigation = () => {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center"
           >
-            <img src="/icons/logo.svg" className="w-14 h-14" />
+            <img src="/icons/logo.svg" className="w-14 h-14 drop-shadow-lg" />
           </motion.div>
           
           <div className="hidden md:flex space-x-8 items-center">
-            <a href="#home" className="text-lime-300 hover:text-white transition-colors">HOME</a>
-            <a href="#testimonials" className="text-lime-300 hover:text-white transition-colors">TESTIMONIALS</a>
-            <a href="#support" className="text-lime-300 hover:text-white transition-colors">BROKER SUPPORT</a>
-            <button className="relative overflow-hidden text-lime-300 px-4 py-2 rounded-lg border-1 hover:text-white transition-colors">
+            <a href="#home" className="text-shadow-sm text-lime-300 hover:text-white transition-colors">HOME</a>
+            <a href="#testimonials" className="text-shadow-sm text-lime-300 hover:text-white transition-colors">TESTIMONIALS</a>
+            <a href="#support" className="text-shadow-sm text-lime-300 hover:text-white transition-colors">BROKER SUPPORT</a>
+            <button className="text-shadow-sm cursor-pointer relative overflow-hidden text-lime-300 px-4 py-2 rounded-lg border-1 hover:text-white transition-colors">
               LOGIN
-              <UserIcon className="absolute top-1 right-0 h-12 w-12 text-lime-400/40" />
+              <UserIcon className="absolute -z-1 top-1 right-0 h-12 w-12 text-lime-300/20" />
             </button>
           </div>
 

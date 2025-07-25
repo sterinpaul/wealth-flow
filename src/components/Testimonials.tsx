@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
   {
@@ -8,7 +8,7 @@ const testimonials = [
     role: "Marketing Director",
     company: "TechCorp",
     text: "This service completely transformed our business operations. The team's expertise and dedication to excellence is unmatched. Highly recommended!",
-    avatar: "SJ"
+    avatar: "SJ",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const testimonials = [
     role: "CEO",
     company: "StartupXYZ",
     text: "Outstanding results! The innovative approach and attention to detail exceeded our expectations. Our ROI increased by 300% within the first quarter.",
-    avatar: "MC"
+    avatar: "MC",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const testimonials = [
     role: "Product Manager",
     company: "InnovateNow",
     text: "Professional, reliable, and incredibly talented. They delivered exactly what we needed, on time and within budget. A truly exceptional experience.",
-    avatar: "ER"
+    avatar: "ER",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const testimonials = [
     role: "CTO",
     company: "FutureTech",
     text: "The quality of work and level of support provided is phenomenal. Our productivity has improved significantly since implementing their solutions.",
-    avatar: "DT"
+    avatar: "DT",
   },
   {
     id: 5,
@@ -40,91 +40,123 @@ const testimonials = [
     role: "Operations Manager",
     company: "GlobalCorp",
     text: "Exceptional service from start to finish. The team went above and beyond to ensure our success. We couldn't be happier with the results!",
-    avatar: "LP"
-  }
+    avatar: "LP",
+  },
+  {
+    id: 6,
+    name: "Sterin Paul",
+    role: "IT Manager",
+    company: "Lifology",
+    text: "We couldn't be happier with the results!",
+    avatar: "SP",
+  },
 ];
 
-const Testimonials = ()=> {
-  const [rotation, setRotation] = useState(0);
+const SPEED_PX_PER_MS = 0.06; // tweak this (higher = faster)
+
+const Testimonials = () => {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [pause, setPause] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setRotation(prev => prev - 72); // 360/5 = 72 degrees per card
-    }, 3000);
+    const el = scrollerRef.current;
+    if (!el) return;
 
-    return () => clearInterval(interval);
-  }, []);
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReduced) return; // respect user preference
 
-  const radius = 280; // Distance from center
+    let rafId: number;
+    let lastTs: number | null = null;
+
+    const loop = (ts: number) => {
+      if (lastTs == null) lastTs = ts;
+      const delta = ts - lastTs;
+      lastTs = ts;
+
+      if (!pause) {
+        const half = el.scrollWidth / 2; // because we duplicated the content
+        el.scrollLeft += delta * SPEED_PX_PER_MS;
+
+        if (el.scrollLeft >= half) {
+          // jump back by half to create the infinite loop illusion
+          el.scrollLeft -= half;
+        }
+      }
+
+      rafId = requestAnimationFrame(loop);
+    };
+
+    rafId = requestAnimationFrame(loop);
+    return () => cancelAnimationFrame(rafId);
+  }, [pause]);
+
+  const duplicated = [...testimonials, ...testimonials];
 
   return (
-    <div id="testimonials" className="min-h-screen bg-black flex flex-col items-center justify-center p-8 overflow-hidden">
+    <div
+      id="testimonials"
+      className="py-20 bg-black flex flex-col gap-12 justify-center items-center px-4"
+    >
       {/* Title */}
-      <motion.h1 
-        className="text-5xl md:text-6xl font-bold text-lime-300 mb-20 tracking-widest"
+      <motion.h1
+        className="text-4xl md:text-5xl font-bold text-lime-300 mb-10 tracking-widest"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         TESTIMONIALS
       </motion.h1>
+      <div className="relative h-full w-full">
+        <div className="absolute left-0 w-1/3 h-full bg-[linear-gradient(to_right,_rgba(0,0,0,1)_0%,_rgba(0,0,0,0.8)_25%,_rgba(0,0,0,0.5)_50%,_rgba(0,0,0,0.2)_75%,_rgba(0,0,0,0)_100%)]"></div>
+        <div className="absolute right-0 w-1/3 h-full bg-[linear-gradient(to_left,_rgba(0,0,0,1)_0%,_rgba(0,0,0,0.8)_25%,_rgba(0,0,0,0.5)_50%,_rgba(0,0,0,0.2)_75%,_rgba(0,0,0,0)_100%)]"></div>
+        <div className="absolute -top-4 h-10 w-full rounded-[100%] bg-black"></div>
+        <div className="absolute -bottom-4 h-10 w-full rounded-[100%] bg-black"></div>
 
-      {/* Carousel Container */}
-      <div className="relative w-full max-w-4xl h-96 mb-20" style={{ perspective: '1200px' }}>
-        <motion.div
-          className="relative w-full h-full"
-          style={{ transformStyle: 'preserve-3d' }}
-          animate={{ rotateY: rotation }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+        <div
+          ref={scrollerRef}
+          onMouseEnter={() => setPause(true)}
+          onMouseLeave={() => setPause(false)}
+          className="w-full grid grid-flow-col auto-cols-min gap-6 overflow-x-auto hide-scrollbar"
         >
-          {testimonials.map((testimonial, index) => {
-            const angle = (index * 72) * (Math.PI / 180); // Convert to radians
-            const x = Math.sin(angle) * radius;
-            const z = Math.cos(angle) * radius;
-            
-            return (
-              <motion.div
-                key={testimonial.id}
-                className="absolute w-64 h-80 top-1/2 left-1/2"
-                style={{
-                  transform: `translate(-50%, -50%) translate3d(${x}px, 0, ${z}px) rotateY(${index * 72}deg)`,
-                  transformStyle: 'preserve-3d'
-                }}
-              >
-                <div className="w-full h-full bg-gradient-to-br from-lime-300 via-lime-400 to-lime-500 rounded-lg shadow-2xl p-6 flex flex-col justify-between transform-gpu backface-hidden">
-                  {/* Quote Icon */}
-                  <div className="text-black/20 text-4xl font-serif mb-2">"</div>
-                  
-                  {/* Testimonial Text */}
-                  <div className="flex-1 flex items-center">
-                    <p className="text-black text-sm leading-relaxed italic">
-                      {testimonial.text}
+          {duplicated.map((testimonial, idx) => (
+            <div
+              key={`${testimonial.id}-${idx}`}
+              className="min-w-72 h-full flex flex-col bg-gradient-to-br from-lime-300 via-lime-400 to-lime-500 shadow-2xl px-6 py-10"
+            >
+              {/* GROWING TEXT BLOCK */}
+              <div className="grow py-2">
+                <p className="text-black/20 leading-5 text-4xl font-serif">"</p>
+                <p className="text-black text-sm leading-relaxed italic">
+                  {testimonial.text}
+                </p>
+              </div>
+
+              {/* AUTHOR BLOCK */}
+              <div className="mt-4 pt-4 border-t border-black/10">
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-black text-lime-400 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <h3 className="text-black font-bold text-base">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-black/70 text-xs">{testimonial.role}</p>
+                    <p className="text-black/70 text-xs font-semibold">
+                      {testimonial.company}
                     </p>
                   </div>
-
-                  {/* Author Section */}
-                  <div className="mt-4 pt-4 border-t border-black/10">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-black text-yellow-400 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                        {testimonial.avatar}
-                      </div>
-                      <div>
-                        <h3 className="text-black font-bold text-base">{testimonial.name}</h3>
-                        <p className="text-black/70 text-xs">{testimonial.role}</p>
-                        <p className="text-black/70 text-xs font-semibold">{testimonial.company}</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-
       {/* Get in Touch Button */}
       <motion.button
-        className="bg-lime-300 hover:bg-lime-400 text-black px-10 py-4 rounded-full text-lg font-bold tracking-wider transition-all duration-300 shadow-lg transform hover:scale-105"
+        className="bg-lime-300 hover:bg-lime-400 text-black px-10 py-4 rounded-2xl text-lg cursor-pointer font-bold tracking-wider transition-all duration-300 custom-box-shadow transform hover:scale-105"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
@@ -132,25 +164,8 @@ const Testimonials = ()=> {
       >
         GET IN TOUCH
       </motion.button>
-
-      {/* Navigation Dots */}
-      <div className="flex space-x-3 mt-8">
-        {testimonials.map((_, index) => {
-          const isActive = Math.abs(rotation / -72) % testimonials.length === index;
-          return (
-            <motion.button
-              key={index}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                isActive ? 'bg-lime-300 w-6' : 'bg-lime-300/40'
-              }`}
-              onClick={() => setRotation(-index * 72)}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            />
-          );
-        })}
-      </div>
     </div>
   );
-}
-export default Testimonials
+};
+
+export default Testimonials;
