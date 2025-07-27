@@ -5,3 +5,6 @@ export { default as WhyWealthFlow } from './WhyWealthFlow';
 export { default as Testimonials } from './Testimonials';
 export { default as FAQ } from './FAQ';
 export { default as Loader } from './Loader';
+export { default as TradingAcademy } from './TradingAcademy';
+export { default as VerifiedAutomation } from './VerifiedAutomation';
+export { default as Community } from './Community';

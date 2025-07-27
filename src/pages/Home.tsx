@@ -6,6 +6,9 @@ import {
   WhyWealthFlow,
   Testimonials,
   FAQ,
+  TradingAcademy,
+  VerifiedAutomation,
+  Community,
 } from '../components';
 import Testimonials2 from '../components/Testimonials2';
 
@@ -18,6 +21,9 @@ const Home = () => {
       <WhyWealthFlow />
       <Testimonials />
       <Testimonials2 />
+      <TradingAcademy />
+      <VerifiedAutomation />
+      <Community />
       <FAQ />
     </div>
   );
