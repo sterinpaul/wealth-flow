@@ -18,7 +18,16 @@ const Hero = () => {
 
   return (
     <section id="home" className="pt-20 pb-16 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-lime-900/40 to-black"></div>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/background-video.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-black/40"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial="hidden"
