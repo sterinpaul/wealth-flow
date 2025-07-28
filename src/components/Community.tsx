@@ -12,7 +12,7 @@ const Community = () => {
   };
 
   return (
-    <section className="py-20 bg-black">
+    <section className="pt-32 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image - Shows first on mobile, second on desktop */}
@@ -24,7 +24,7 @@ const Community = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="order-1 lg:order-2"
           >
-            <img src="/images/community.svg" className='w-full h-full' alt="Community image" />
+            <img src="/images/community.svg" className='w-full' alt="Community image" />
           </motion.div>
 
           {/* Text content - Shows second on mobile, first on desktop */}

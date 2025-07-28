@@ -12,7 +12,7 @@ const TradingAcademy = () => {
   };
 
   return (
-    <section className="py-20 bg-black">
+    <section className="pb-10 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
           {/* Image - Shows first on mobile, second on desktop */}
@@ -24,7 +24,7 @@ const TradingAcademy = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="order-1 lg:order-2"
           >
-            <img src="/images/trading-academy.svg" className='w-full h-full' alt="Trading academy image" />
+            <img src="/images/trading-academy.svg" className='w-full' alt="Trading academy image" />
           </motion.div>
 
           {/* Text content - Shows second on mobile, first on desktop */}

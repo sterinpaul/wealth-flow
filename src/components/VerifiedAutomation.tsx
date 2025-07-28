@@ -12,7 +12,7 @@ const VerifiedAutomation = () => {
   };
 
   return (
-    <section className="py-20 bg-black">
+    <section className="pb-10 pt-20 lg:pt-10 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image - Shows first on mobile and desktop */}
@@ -24,7 +24,7 @@ const VerifiedAutomation = () => {
             transition={{ duration: 0.8 }}
             className="order-1"
           >
-            <img src="/images/verified-automation.svg" className='w-full h-full' alt="Verified automation image" />
+            <img src="/images/verified-automation.svg" className='w-full' alt="Verified automation image" />
           </motion.div>
 
           {/* Text content - Shows second on mobile and desktop */}

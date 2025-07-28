@@ -52,7 +52,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-black to-lime-950 min-h-screen">
+    <section className="bg-gradient-to-b from-black to-lime-950 min-h-screen grid place-items-center">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}

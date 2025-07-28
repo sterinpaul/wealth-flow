@@ -8,3 +8,4 @@ export { default as Loader } from './Loader';
 export { default as TradingAcademy } from './TradingAcademy';
 export { default as VerifiedAutomation } from './VerifiedAutomation';
 export { default as Community } from './Community';
+export { default as ContactUs } from './ContactUs';

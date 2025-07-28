@@ -9,6 +9,7 @@ import {
   TradingAcademy,
   VerifiedAutomation,
   Community,
+  ContactUs,
 } from '../components';
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
       <VerifiedAutomation />
       <Community />
       <FAQ />
+      <ContactUs />
     </div>
   );
 };
