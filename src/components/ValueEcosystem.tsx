@@ -17,7 +17,7 @@ const ValueEcosystem = () => {
   };
 
   return (
-    <section className="py-16 bg-lime-300">
+    <section className="py-16 bg-lime-300 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -51,7 +51,7 @@ const ValueEcosystem = () => {
                 <img
                   src="/icons/trading.svg"
                   alt="Trading academy icon"
-                  className="w-12 h-12 text-lime-300 mx-auto mb-4"
+                  className="w-20 h-20 text-lime-300 mx-auto mb-4"
                 />
                 <h3 className="text-white text-xl leading-3 font-bold mb-2">
                   WEALTH FLOW
@@ -131,7 +131,7 @@ const ValueEcosystem = () => {
                 <img
                   src="/icons/automation.svg"
                   alt="Automation icon"
-                  className="w-12 h-12 text-lime-300 mx-auto mb-4"
+                  className="w-28 h-20 text-lime-300 mx-auto mb-4"
                 />
                 <h3 className="text-white leading-3 text-xl font-bold mb-2">
                   WEALTH FLOW
@@ -212,7 +212,7 @@ const ValueEcosystem = () => {
                 <img
                   src="/icons/community.svg"
                   alt="Community icon"
-                  className="w-12 h-12 text-lime-300 mx-auto mb-4"
+                  className="w-20 h-20 text-lime-300 mx-auto mb-4"
                 />
                 <h3 className="text-white leading-3 text-xl font-bold mb-2">
                   WEALTH FLOW

@@ -10,17 +10,15 @@ import {
   VerifiedAutomation,
   Community,
 } from '../components';
-import Testimonials2 from '../components/Testimonials2';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[color:var(--bg-primary)] text-[color:var(--text-primary)] overflow-x-hidden">
       <Navigation />
       <Hero />
       <ValueEcosystem />
       <WhyWealthFlow />
       <Testimonials />
-      <Testimonials2 />
       <TradingAcademy />
       <VerifiedAutomation />
       <Community />

@@ -17,7 +17,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="pt-20 pb-16 relative overflow-hidden">
+    <section id="home" className="min-h-screen grid place-items-center pt-20 pb-16 relative overflow-hidden">
       <video
         autoPlay
         loop
@@ -33,7 +33,7 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
-          className="py-20"
+          className='mt-52'
         >
           <motion.h1 
             variants={fadeInUp}
