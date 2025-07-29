@@ -46,7 +46,7 @@ const Hero = () => {
           
           <motion.p 
             variants={fadeInUp}
-            className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto custom-box-shadow p-1 rounded-xl"
+            className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto custom-box-shadow p-1 px-3 rounded-xl"
           >
             THE WORLD'S MOST VALUE ORIENTED FREE TRADING COMMUNITY
           </motion.p>

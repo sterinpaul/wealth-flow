@@ -61,7 +61,7 @@ const ContactUs = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-lime-950 to-black min-h-screen">
+    <section className="bg-gradient-to-b from-lime-950 to-black grid place-items-center min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"

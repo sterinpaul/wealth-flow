@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface FAQItem {
   question: string;
@@ -53,7 +53,7 @@ const FAQ = () => {
 
   return (
     <section className="bg-gradient-to-b from-black to-lime-950 min-h-screen grid place-items-center">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-8">
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ const FAQ = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={staggerContainer}
-          
+          className="w-full space-y-0"
         >
           {faqs.map((faq, index,arr) => (
             <motion.div 
@@ -93,27 +93,32 @@ const FAQ = () => {
                 </motion.div>
               </button>
               
-              <AnimatePresence initial={false}>
-                {openFAQ === index && (
-                  <motion.div
-                    key="content"
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ 
-                      duration: 0.3,
-                      ease: [0.04, 0.62, 0.23, 0.98]
+              <motion.div
+                initial={false}
+                animate={{ height: openFAQ === index ? "auto" : 0 }}
+                transition={{ 
+                  duration: 0.3,
+                  ease: [0.04, 0.62, 0.23, 0.98]
+                }}
+                className="overflow-hidden"
+              >
+                <div className="px-4 sm:px-6 p-4 sm:p-6">
+                  <motion.p
+                    initial={false}
+                    animate={{ 
+                      opacity: openFAQ === index ? 1 : 0,
+                      y: openFAQ === index ? 0 : -10
                     }}
-                    className="overflow-hidden"
+                    transition={{ 
+                      duration: 0.2,
+                      delay: openFAQ === index ? 0.1 : 0
+                    }}
+                    className="text-gray-300 text-sm sm:text-base leading-relaxed"
                   >
-                    <div className="px-4 sm:px-6 p-4 sm:p-6">
-                      <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                    {faq.answer}
+                  </motion.p>
+                </div>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>
