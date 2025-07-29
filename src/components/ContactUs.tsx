@@ -46,7 +46,7 @@ const ContactUs = () => {
         </svg>
       ),
       url: '#',
-      color: 'hover:text-blue-600'
+      color: 'hover:text-blue-500'
     },
     {
       name: 'Twitter',
@@ -79,7 +79,7 @@ const ContactUs = () => {
           
           <motion.p 
             variants={fadeInUp}
-            className="text-xl text-gray-300 text-center mb-16 max-w-2xl mx-auto"
+            className="text-xl text-gray-300 text-center mb-6 max-w-2xl mx-auto"
           >
             Get in touch with our trading experts and join our community
           </motion.p>
