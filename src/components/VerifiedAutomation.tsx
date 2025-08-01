@@ -40,19 +40,10 @@ const VerifiedAutomation = () => {
               VERIFIED AUTOMATION
             </h2>
             
+            <p className="text-gray-300 text-lg leading-1">
+              AUTOMATION - POWERED BY SYPHON AI</p>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-              aliquip ex ea commodo consequat. Duis aute irure dolor in 
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-              culpa qui officia deserunt mollit anim id est laborum. Sed ut 
-              perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
-              inventore veritatis et quasi architecto beatae vitae dicta sunt 
-              explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut 
-              odit aut fugit.
+              Wealth Flow is proud to partner with Syphon AI, a leading force in verified trading automation. Through this exclusive collaboration, Syphon AI has agreed to provide our community with direct access to their high-performance systems - fully verified through TradeZella and FX Blue. These cutting-edge strategies are now available to test completely free via copy trading accounts, offered through our partnered broker. Designed for transparency, built for results, and accessible to all Wealth Flow members, this is automation on your terms - intelligent, consistent, and ready to scale your trading journey.
             </p>
 
             <motion.button

@@ -45,9 +45,9 @@ const testimonials = [
   {
     id: 6,
     name: "Sterin Paul",
-    role: "IT Manager",
-    company: "Lifology",
-    text: "We couldn't be happier with the results!",
+    role: "CTO",
+    company: "Innovento",
+    text: "Always getting more than expected.",
     avatar: "SP",
   },
 ];

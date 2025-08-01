@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+const BACKGROUND_VIDEO = import.meta.env.VITE_HERO_BACKGROUND_VIDEO
 
 const Hero = () => {
   const fadeInUp = {
@@ -25,7 +26,7 @@ const Hero = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="https://res.cloudinary.com/cloud-personal-project/video/upload/v1753657982/background-video_ea6rji.mp4" type="video/mp4" />
+        <source src={BACKGROUND_VIDEO} type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -41,18 +41,7 @@ const Community = () => {
             </h2>
             
             <p className="text-gray-300 text-lg leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-              aliquip ex ea commodo consequat. Duis aute irure dolor in 
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-              culpa qui officia deserunt mollit anim id est laborum. Sed ut 
-              perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
-              inventore veritatis et quasi architecto beatae vitae dicta sunt 
-              explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut 
-              odit aut fugit.
+              At Wealth Flow, community is everything. We've created an exclusive space for ambitious traders to connect, grow, and win together. This isn’t just a place to trade it’s where mindsets shift and results compound. Inside the community, you gain access to daily market analysis, expert trade ideas, and live insights. You’ll find powerful tools, free educational content, and a supportive network to guide you through every phase of your trading journey. Whether you’re asking questions, sharing setups, or celebrating milestones this is where traders transform into wealth-builders.
             </p>
 
             <motion.button
