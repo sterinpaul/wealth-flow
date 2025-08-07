@@ -57,10 +57,10 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-6 lg:justify-evenly justify-center items-center"
           >
             <button className="bg-lime-400 bg-[url(/background.svg)] bg-[length:20rem] custom-box-shadow overflow-hidden rounded-lg hover:bg-lime-300 shadow shadow-lime-300 transition-all transform hover:scale-105">
-              <div className='bg-lime-300/90 w-52 px-8 py-4 text-black font-extrabold leading-5 text-lg'>COMMUNITY CHANNEL</div>
+              <div className='bg-lime-300/90 w-56 p-4 text-black font-extrabold leading-5 text-lg'>SEND US A MESSAGE</div>
             </button>
             <button className="bg-lime-400 bg-[url(/background.svg)] bg-[length:20rem] custom-box-shadow overflow-hidden rounded-lg hover:bg-lime-300 shadow shadow-lime-300 transition-all transform hover:scale-105">
-              <div className='bg-lime-300/90 w-52 px-8 py-4 text-black font-extrabold leading-5 text-lg'>COMMUNITY CHANNEL</div>
+              <div className='bg-lime-300/90 w-56 p-4 text-black font-extrabold leading-5 text-lg'>BOOK A CALL</div>
             </button>
           </motion.div>
         </motion.div>

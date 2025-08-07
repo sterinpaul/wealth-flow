@@ -48,12 +48,16 @@ const FAQ = () => {
     {
       question: "Where can I get all the free stuff that is promised?",
       answer: "Join our community channel to access free trading courses, daily signals, market analysis, tools, and educational resources immediately upon joining."
+    },
+    {
+      question: "How are you able to run this for FREE?",
+      answer: "Here's how it works: through our partnership with PuPrime, we're compensated whenever someone signs up and starts trading on their platform through us. This model allows us to cover all operational costs without charging our community a single cent. That means you get full access to our premium resources - including signals, education, and tools - completely free."
     }
   ];
 
   return (
     <section className="bg-gradient-to-b from-black to-lime-950 min-h-screen grid place-items-center">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-20 w-full mt-8">
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

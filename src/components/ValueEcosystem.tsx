@@ -18,7 +18,7 @@ const ValueEcosystem = () => {
 
   return (
     <section className="py-16 bg-lime-300 min-h-screen grid place-items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-20">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -104,17 +104,96 @@ const ValueEcosystem = () => {
                   </li>
                 </ul>
               </div>
-              <button className="bg-lime-300 text-black w-full p-4 mt-4 rounded-lg cursor-pointer hover:bg-lime-400 transition-all delay-100 flex items-center justify-between">
-                <span className="mx-auto font-bold">SELECT</span>
+              <a href="#trading-academy" className="bg-lime-300 text-black w-full p-4 mt-4 rounded-lg cursor-pointer hover:bg-lime-400 transition-all delay-100 flex items-center justify-between">
+                <span className="mx-auto font-bold">KNOW MORE</span>
                 <img
                   src="/icons/arrow-value-button.svg"
                   className="w-12 h-12"
                   alt="Arrow icon"
                 />
-              </button>
+              </a>
             </div>
           </motion.div>
-
+          {/* Community */}
+          <motion.div
+            variants={fadeInUp}
+            className=" bg-[url(/background.svg)] bg-[length:20rem] rounded-2xl overflow-hidden text-center"
+          >
+            <div
+              className="p-8 flex flex-col h-full"
+              style={{
+                backgroundImage:
+                  "linear-gradient(to bottom, black 0%, rgba(0,0,0,0.9) 70%, transparent 100%)",
+              }}
+            >
+              <div className="h-full">
+                <img
+                  src="/icons/community.svg"
+                  alt="Community icon"
+                  className="w-20 h-20 text-lime-300 mx-auto mb-4"
+                />
+                <h3 className="text-white leading-3 text-xl font-bold mb-2">
+                  WEALTH FLOW
+                </h3>
+                <h4 className="text-white text-lg font-semibold mb-4">
+                  COMMUNITY
+                </h4>
+                <ul className="text-gray-300 text-sm space-y-4 flex flex-col items-start">
+                  <li className="flex gap-2 items-start">
+                    <img
+                      src="/icons/arrow-small.svg"
+                      className="w-6 h-6 mt-1"
+                      alt="Arrow point icon"
+                    />
+                    <p className="text-left">
+                      Exclusive community for traders focused on growth,
+                      learning, and results
+                    </p>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <img
+                      src="/icons/arrow-small.svg"
+                      className="w-6 h-6 mt-1"
+                      alt="Arrow point icon"
+                    />
+                    <p className="text-left">
+                      Daily market analysis, trade ideas, and live insights from
+                      experts
+                    </p>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <img
+                      src="/icons/arrow-small.svg"
+                      className="w-6 h-6 mt-1"
+                      alt="Arrow point icon"
+                    />
+                    <p className="text-left">
+                      Access to free trading courses, tools, and resources
+                    </p>
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <img
+                      src="/icons/arrow-small.svg"
+                      className="w-6 h-6 mt-1"
+                      alt="Arrow point icon"
+                    />
+                    <p className="text-left">
+                      Supportive network for discussions, Q&A, and mentorship
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <a href="#community" className="bg-lime-300 text-black w-full p-4 mt-4 rounded-lg cursor-pointer hover:bg-lime-400 transition-all delay-100 flex items-center justify-between">
+                <span className="mx-auto font-bold">KNOW MORE</span>
+                <img
+                  src="/icons/arrow-value-button.svg"
+                  className="w-12 h-12"
+                  alt="Arrow icon"
+                />
+              </a>
+            </div>
+          </motion.div>
+          
           {/* Verified Automation */}
           <motion.div
             variants={fadeInUp}
@@ -185,97 +264,17 @@ const ValueEcosystem = () => {
                   </li>
                 </ul>
               </div>
-              <button className="bg-lime-300 text-black w-full p-4 mt-4 rounded-lg cursor-pointer hover:bg-lime-400 transition-all delay-100 flex items-center justify-between">
-                <span className="mx-auto font-bold">SELECT</span>
+              <a href="#verified-automation" className="bg-lime-300 text-black w-full p-4 mt-4 rounded-lg cursor-pointer hover:bg-lime-400 transition-all delay-100 flex items-center justify-between">
+                <span className="mx-auto font-bold">KNOW MORE</span>
                 <img
                   src="/icons/arrow-value-button.svg"
                   className="w-12 h-12"
                   alt="Arrow icon"
                 />
-              </button>
+              </a>
             </div>
           </motion.div>
-
-          {/* Community */}
-          <motion.div
-            variants={fadeInUp}
-            className=" bg-[url(/background.svg)] bg-[length:20rem] rounded-2xl overflow-hidden text-center"
-          >
-            <div
-              className="p-8 flex flex-col h-full"
-              style={{
-                backgroundImage:
-                  "linear-gradient(to bottom, black 0%, rgba(0,0,0,0.9) 70%, transparent 100%)",
-              }}
-            >
-              <div className="h-full">
-                <img
-                  src="/icons/community.svg"
-                  alt="Community icon"
-                  className="w-20 h-20 text-lime-300 mx-auto mb-4"
-                />
-                <h3 className="text-white leading-3 text-xl font-bold mb-2">
-                  WEALTH FLOW
-                </h3>
-                <h4 className="text-white text-lg font-semibold mb-4">
-                  COMMUNITY
-                </h4>
-                <ul className="text-gray-300 text-sm space-y-4 flex flex-col items-start">
-                  <li className="flex gap-2 items-start">
-                    <img
-                      src="/icons/arrow-small.svg"
-                      className="w-6 h-6 mt-1"
-                      alt="Arrow point icon"
-                    />
-                    <p className="text-left">
-                      Exclusive community for traders focused on growth,
-                      learning, and results
-                    </p>
-                  </li>
-                  <li className="flex gap-2 items-start">
-                    <img
-                      src="/icons/arrow-small.svg"
-                      className="w-6 h-6 mt-1"
-                      alt="Arrow point icon"
-                    />
-                    <p className="text-left">
-                      Daily market analysis, trade ideas, and live insights from
-                      experts
-                    </p>
-                  </li>
-                  <li className="flex gap-2 items-start">
-                    <img
-                      src="/icons/arrow-small.svg"
-                      className="w-6 h-6 mt-1"
-                      alt="Arrow point icon"
-                    />
-                    <p className="text-left">
-                      Access to free trading courses, tools, and resources
-                    </p>
-                  </li>
-                  <li className="flex gap-2 items-start">
-                    <img
-                      src="/icons/arrow-small.svg"
-                      className="w-6 h-6 mt-1"
-                      alt="Arrow point icon"
-                    />
-                    <p className="text-left">
-                      Supportive network for discussions, Q&A, and mentorship
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <button className="bg-lime-300 text-black w-full p-4 mt-4 rounded-lg cursor-pointer hover:bg-lime-400 transition-all delay-100 flex items-center justify-between">
-                <span className="mx-auto font-bold">SELECT</span>
-                <img
-                  src="/icons/arrow-value-button.svg"
-                  className="w-12 h-12"
-                  alt="Arrow icon"
-                />
-              </button>
-            </div>
-          </motion.div>
-        </motion.div>
+        </motion.div>          
       </div>
     </section>
   );

@@ -12,8 +12,8 @@ const TradingAcademy = () => {
   };
 
   return (
-    <section className="pb-10 bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="trading-academy" className="pb-52 lg:pb-0 bg-black">
+      <div className="mx-auto px-4 sm:px-6 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
           {/* Image - Shows first on mobile, second on desktop */}
           <motion.div

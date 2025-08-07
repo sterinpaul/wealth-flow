@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
 
 const ContactUs = () => {
   const fadeInUp = {
@@ -62,7 +63,7 @@ const ContactUs = () => {
 
   return (
     <section className="bg-gradient-to-b from-lime-950 to-black grid place-items-center min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-20">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -152,6 +153,9 @@ const ContactUs = () => {
                 <p className="text-center text-gray-300 mt-4 text-sm">
                   Join our community and stay updated with the latest trading insights
                 </p>
+                <div className='mx-auto text-center mt-4'>
+                <Link to="/terms" className="text-lime-300 text-sm hover:text-white">Terms and Conditions</Link>
+                </div>
               </div>
             </motion.div>
           </div>

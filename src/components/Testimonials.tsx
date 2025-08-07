@@ -97,7 +97,7 @@ const Testimonials = () => {
   return (
     <div
       id="testimonials"
-      className="py-20 bg-black flex flex-col gap-12 justify-center items-center px-4"
+      className="min-h-screen bg-black flex flex-col gap-12 justify-center items-center px-4"
     >
       {/* Title */}
       <motion.h1

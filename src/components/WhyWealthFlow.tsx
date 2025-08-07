@@ -50,9 +50,9 @@ const WhyWealthFlow = () => {
   ];
 
   return (
-    <section className=" bg-lime-300/50 bg-[url(/background.svg)] bg-[length:100rem]">
+    <section className="bg-lime-300/50 bg-[url(/background.svg)] bg-[length:100rem]">
       <div className="w-full h-full bg-black/85 py-16 min-h-screen grid place-items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-20">
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
