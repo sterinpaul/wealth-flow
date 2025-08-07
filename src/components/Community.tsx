@@ -20,7 +20,7 @@ const Community  = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInRight}
+            variants={fadeInLeft}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="order-1"
           >
@@ -36,7 +36,7 @@ const Community  = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInLeft}
+            variants={fadeInRight}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6 order-2"
           >
