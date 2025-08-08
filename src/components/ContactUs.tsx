@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import {
   EnvelopeIcon,
-  MapPinIcon,
   PhoneIcon,
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
@@ -51,15 +50,9 @@ const ContactUs = () => {
     {
       name: "Circle",
       icon: (
-        <svg
-          className="w-8 h-8"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          preserveAspectRatio="xMidYMid meet"
-        >
+        <svg viewBox="0 0 24 24" className="icon">
           <title>Circle</title>
-          <circle cx="12" cy="12" r="12" fill="currentColor" />
+          <circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" strokeWidth="1.6" />
           <text
             x="12"
             y="16"
@@ -67,14 +60,14 @@ const ContactUs = () => {
             fontSize="12"
             fontFamily="Arial, sans-serif"
             fontWeight="bold"
-            fill="#ffffff"
+            fill="currentColor"
           >
             C
           </text>
         </svg>
       ),
       url: "https://login.circle.so/sign_in",
-      color: "hover:text-indigo-500",
+      color: "hover:text-indigo-600",
     },
     // {
     //   name: 'Telegram',
@@ -107,7 +100,7 @@ const ContactUs = () => {
 
           <motion.p
             variants={fadeInUp}
-            className="text-xl text-gray-300 text-center mb-6 max-w-2xl mx-auto"
+            className="text-xl text-gray-300 text-center mb-10 max-w-2xl mx-auto"
           >
             Get in touch with our trading experts and join our community
           </motion.p>
@@ -141,20 +134,6 @@ const ContactUs = () => {
                     <div>
                       <h4 className="text-white font-semibold">Phone</h4>
                       <p className="text-gray-300">+1 (647) 250-6205</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-lime-300/20 rounded-lg flex items-center justify-center">
-                      <MapPinIcon className="w-6 h-6 text-lime-300" />
-                    </div>
-                    <div>
-                      <h4 className="text-white font-semibold">Office</h4>
-                      <p className="text-gray-300">
-                        123 Trading Street
-                        <br />
-                        Financial District, NY 10004
-                      </p>
                     </div>
                   </div>
                 </div>

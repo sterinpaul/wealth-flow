@@ -126,7 +126,7 @@ const Terms = () => {
             <div>
               <h3 className="text-2xl font-bold text-lime-300 mb-4">6. Governing Law</h3>
               <p className="leading-relaxed">
-                These Terms are governed by the laws of [Insert Jurisdiction]. Disputes will be resolved in the courts of that jurisdiction.
+                These Terms are governed by the laws of Canadian Jurisdiction. Disputes will be resolved in the courts of that jurisdiction.
               </p>
             </div>
 
