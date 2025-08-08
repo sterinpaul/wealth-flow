@@ -18,21 +18,21 @@ const Navigation = () => {
   }
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-gradient-to-b from-lime-950/40 to-black/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-gradient-to-b from-lime-950/40 to-black/5">
+      <div className="mx-auto px-4 sm:px-6 md:px-10">
         <div className="flex justify-between items-center h-16">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center"
           >
-            <img src="/icons/logo.svg" className="w-14 h-14 drop-shadow-lg" />
+            <img src="/icons/logo.svg" className="w-14 h-14 custom-drop-shadow" />
           </motion.div>
           
           <div className="hidden md:flex space-x-8 items-center">
-            <button onClick={()=>navigateHandler("home")} className="cursor-pointer block text-shadow-sm shadow-white text-lime-300 hover:text-white transition-colors">HOME</button>
-            <button onClick={()=>navigateHandler("testimonials")} className="cursor-pointer block text-shadow-sm text-lime-300 hover:text-white transition-colors">TESTIMONIALS</button>
-            <button className="text-shadow-sm cursor-pointer relative overflow-hidden text-lime-300 px-4 py-2 rounded-lg border-1 hover:text-white transition-colors">
+            <button onClick={()=>navigateHandler("home")} className="custom-text-shadow cursor-pointer block  text-lime-300 hover:text-white transition-colors">HOME</button>
+            <button onClick={()=>navigateHandler("testimonials")} className="custom-text-shadow cursor-pointer block  text-lime-300 hover:text-white transition-colors">TESTIMONIALS</button>
+            <button className="custom-text-shadow shadow-lg cursor-pointer relative overflow-hidden text-lime-300 px-4 py-2 rounded-lg border-1 hover:text-white transition-colors">
               LOGIN
               <UserIcon className="absolute -z-1 top-1 right-0 h-12 w-12 text-lime-300/20" />
             </button>
@@ -57,9 +57,9 @@ const Navigation = () => {
           className="md:hidden  border-t border-lime-500/20"
         >
           <div className="px-4 py-4 space-y-4">
-            <button onClick={()=>navigateHandler("home")} className="cursor-pointer block text-shadow-sm text-lime-300 hover:text-white transition-colors">HOME</button>
-            <button onClick={()=>navigateHandler("testimonials")} className="cursor-pointer block text-shadow-sm text-lime-300 hover:text-white transition-colors">TESTIMONIALS</button>
-            <button className="w-full text-lime-300 py-2">LOGIN</button>
+            <button onClick={()=>navigateHandler("home")} className="custom-text-shadow cursor-pointer block text-lime-300 hover:text-white transition-colors">HOME</button>
+            <button onClick={()=>navigateHandler("testimonials")} className="custom-text-shadow cursor-pointer block  text-lime-300 hover:text-white transition-colors">TESTIMONIALS</button>
+            <button className="custom-text-shadow shadow-lg cursor-pointer text-lime-300 p-2 mx-auto block rounded-lg border-1 hover:text-white">LOGIN</button>
           </div>
         </motion.div>
       )}

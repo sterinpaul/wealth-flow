@@ -33,6 +33,14 @@ html {
   box-shadow: 0 0 20px 1px rgb(61, 89, 0);
 }
 
+.custom-text-shadow{
+  text-shadow: 1px 1px 4px black;
+}
+
+.custom-drop-shadow{
+  filter:drop-shadow(1px 1px 1px black);
+}
+
 /* For all elements */
 .hide-scrollbar {
   scrollbar-width: none;       /* Firefox */
