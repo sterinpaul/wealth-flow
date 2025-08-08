@@ -32,10 +32,10 @@ const Navigation = () => {
           <div className="hidden md:flex space-x-8 items-center">
             <button onClick={()=>navigateHandler("home")} className="custom-text-shadow cursor-pointer block  text-lime-300 hover:text-white transition-colors">HOME</button>
             <button onClick={()=>navigateHandler("testimonials")} className="custom-text-shadow cursor-pointer block  text-lime-300 hover:text-white transition-colors">TESTIMONIALS</button>
-            <button className="custom-text-shadow shadow-lg cursor-pointer relative overflow-hidden text-lime-300 px-4 py-2 rounded-lg border-1 hover:text-white transition-colors">
+            <a href='https://login.circle.so/sign_in' target='_blank' className="custom-text-shadow shadow-lg cursor-pointer relative overflow-hidden text-lime-300 px-4 py-2 rounded-lg border-1 hover:text-white transition-colors">
               LOGIN
               <UserIcon className="absolute -z-1 top-1 right-0 h-12 w-12 text-lime-300/20" />
-            </button>
+            </a>
           </div>
 
           <div className="md:hidden grid place-items-center">
@@ -59,7 +59,7 @@ const Navigation = () => {
           <div className="px-4 py-4 space-y-4">
             <button onClick={()=>navigateHandler("home")} className="custom-text-shadow cursor-pointer block text-lime-300 hover:text-white transition-colors">HOME</button>
             <button onClick={()=>navigateHandler("testimonials")} className="custom-text-shadow cursor-pointer block  text-lime-300 hover:text-white transition-colors">TESTIMONIALS</button>
-            <button className="custom-text-shadow shadow-lg cursor-pointer text-lime-300 p-2 mx-auto block rounded-lg border-1 hover:text-white">LOGIN</button>
+            <a href='https://login.circle.so/sign_in' target='_blank' className="custom-text-shadow shadow-lg cursor-pointer text-lime-300 p-2 mx-auto block rounded-lg border-1 hover:text-white">LOGIN</a>
           </div>
         </motion.div>
       )}

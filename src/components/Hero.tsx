@@ -56,12 +56,12 @@ const Hero = () => {
             variants={fadeInUp}
             className="flex flex-col sm:flex-row gap-6 lg:justify-evenly justify-center items-center"
           >
-            <button className="bg-lime-400 bg-[url(/background.svg)] bg-[length:20rem] custom-box-shadow overflow-hidden rounded-lg hover:bg-lime-300 shadow shadow-lime-300 transition-all transform hover:scale-105">
+            <a href='https://wa.me/16472506205' target='_blank' className="bg-lime-400 bg-[url(/background.svg)] bg-[length:20rem] custom-box-shadow overflow-hidden rounded-lg hover:bg-lime-300 shadow shadow-lime-300 transition-all transform hover:scale-105">
               <div className='bg-lime-300/90 w-56 p-4 text-black font-extrabold leading-5 text-lg'>SEND US A MESSAGE</div>
-            </button>
-            <button className="bg-lime-400 bg-[url(/background.svg)] bg-[length:20rem] custom-box-shadow overflow-hidden rounded-lg hover:bg-lime-300 shadow shadow-lime-300 transition-all transform hover:scale-105">
+            </a>
+            <a href='https://scheduler.zoom.us/wealth-flow/getting-started-call' target='_blank' className="bg-lime-400 bg-[url(/background.svg)] bg-[length:20rem] custom-box-shadow overflow-hidden rounded-lg hover:bg-lime-300 shadow shadow-lime-300 transition-all transform hover:scale-105">
               <div className='bg-lime-300/90 w-56 p-4 text-black font-extrabold leading-5 text-lg'>BOOK A CALL</div>
-            </button>
+            </a>
           </motion.div>
         </motion.div>
       </div>
