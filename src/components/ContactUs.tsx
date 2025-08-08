@@ -52,13 +52,13 @@ const ContactUs = () => {
       icon: (
         <svg viewBox="0 0 24 24" className="icon">
           <title>Circle</title>
-          <circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" strokeWidth="1.6" />
+          <circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" strokeWidth="1.2" />
           <text
             x="12"
-            y="16"
+            y="15.2"
             textAnchor="middle"
-            fontSize="12"
-            fontFamily="Arial, sans-serif"
+            fontSize="9"
+            fontFamily="Baloo 2"
             fontWeight="bold"
             fill="currentColor"
           >
