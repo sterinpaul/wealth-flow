@@ -4,51 +4,93 @@ import { useEffect, useRef, useState } from "react";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "Marketing Director",
-    company: "TechCorp",
-    text: "This service completely transformed our business operations. The team's expertise and dedication to excellence is unmatched. Highly recommended!",
-    avatar: "SJ",
+    name: "Amanda L.",
+    location: "Toronto",
+    text: "Joining Wealth Flow changed my entire perspective on trading. The course content is easy to follow, and the community is always there to support each other. My trading skills have improved dramatically.",
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "CEO",
-    company: "StartupXYZ",
-    text: "Outstanding results! The innovative approach and attention to detail exceeded our expectations. Our ROI increased by 300% within the first quarter.",
-    avatar: "MC",
+    name: "Jason T.",
+    location: "",
+    text: "I didn't expect a free course to be this comprehensive. It's packed with practical advice, and I've gained so much insight. Wealth Flow really knows how to teach trading!",
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
-    role: "Product Manager",
-    company: "InnovateNow",
-    text: "Professional, reliable, and incredibly talented. They delivered exactly what we needed, on time and within budget. A truly exceptional experience.",
-    avatar: "ER",
+    name: "Priya K.",
+    location: "London",
+    text: "I've always been nervous about trading, but Wealth Flow helped me build the confidence I needed. Their signals are consistently accurate, and the team is so supportive.",
   },
   {
     id: 4,
-    name: "David Thompson",
-    role: "CTO",
-    company: "FutureTech",
-    text: "The quality of work and level of support provided is phenomenal. Our productivity has improved significantly since implementing their solutions.",
-    avatar: "DT",
+    name: "Mark B.",
+    location: "Los Angeles",
+    text: "Wealth Flow is all about real results. There's no nonsense, just clear strategies that I can apply. I've seen a noticeable difference in my trading performance.",
   },
   {
     id: 5,
-    name: "Lisa Park",
-    role: "Operations Manager",
-    company: "GlobalCorp",
-    text: "Exceptional service from start to finish. The team went above and beyond to ensure our success. We couldn't be happier with the results!",
-    avatar: "LP",
+    name: "Emily C.",
+    location: "Sydney",
+    text: "The signals from Wealth Flow are fantastic. I've gone from being a beginner to making smarter trades, and it's all thanks to the guidance from the community.",
   },
   {
     id: 6,
-    name: "Sterin Paul",
-    role: "CTO",
-    company: "Innovento",
-    text: "Always getting more than expected.",
-    avatar: "SP",
+    name: "Carlos D.",
+    location: "",
+    text: "I've tried a lot of courses, but nothing compares to the quality of content and support at Wealth Flow. It's more than just a community; it's a place where traders thrive.",
+  },
+  {
+    id: 7,
+    name: "Sarah W.",
+    location: "Vancouver",
+    text: "The team at Wealth Flow is amazing. They break things down in a way that makes sense, and I feel so much more confident making trades now.",
+  },
+  {
+    id: 8,
+    name: "John H.",
+    location: "Chicago",
+    text: "As a newbie, I was lost when I first started, but Wealth Flow took me through everything step by step. I now feel like I understand the market and can make informed decisions.",
+  },
+  {
+    id: 9,
+    name: "Linda R.",
+    location: "Dubai",
+    text: "I've been part of several trading groups, but Wealth Flow is different. They focus on strategies that actually work, and the resources are second to none.",
+  },
+  {
+    id: 10,
+    name: "Raj P.",
+    location: "Toronto",
+    text: "Thanks to Wealth Flow, I was able to leave my 9 to 5. The strategies they teach are straightforward, and I've seen a steady increase in my profits.",
+  },
+  {
+    id: 11,
+    name: "Megan T.",
+    location: "Los Angeles",
+    text: "The content at Wealth Flow is invaluable. They really focus on teaching the fundamentals, and that's made a huge difference in my trading outcomes.",
+  },
+  {
+    id: 12,
+    name: "David S.",
+    location: "London",
+    text: "From day one, I felt like I belonged in the Wealth Flow community. It's not just about trading; it's about learning and growing together.",
+  },
+  {
+    id: 13,
+    name: "Sophie G.",
+    location: "Paris",
+    text: "I'm so glad I found Wealth Flow. The focus on Smart Money Concepts has helped me gain a deeper understanding of how the market works, and my trades have been more successful as a result.",
+  },
+  {
+    id: 14,
+    name: "Chris A.",
+    location: "Dubai",
+    text: "Before Wealth Flow, I was overwhelmed by the complexity of trading. Now, I feel like I have a clear direction and the tools I need to succeed.",
+  },
+  {
+    id: 15,
+    name: "Nathan K.",
+    location: "Melbourne",
+    text: "I've tried so many different strategies, but Wealth Flow's approach has been the most effective. Their course content is top-notch, and I've seen consistent results.",
   },
 ];
 
@@ -135,19 +177,15 @@ const Testimonials = () => {
 
               {/* AUTHOR BLOCK */}
               <div className="mt-4 pt-4 border-t border-black/10">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-black text-lime-400 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
+                <div className="flex flex-col items-end">
+                  
                     <h3 className="text-black font-bold text-base">
                       {testimonial.name}
                     </h3>
-                    <p className="text-black/70 text-xs">{testimonial.role}</p>
                     <p className="text-black/70 text-xs font-semibold">
-                      {testimonial.company}
+                      {testimonial.location}
                     </p>
-                  </div>
+                  
                 </div>
               </div>
             </div>
